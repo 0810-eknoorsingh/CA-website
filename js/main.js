@@ -11,7 +11,66 @@
     hideDistantElements: false,
     scrollProperty: 'scroll'
   });
+// Get all the dropdown buttons
+// Get all the dropdown buttons
+// Get all the dropdown buttons
+// Get all the dropdown buttons
+// Get all the dropdown buttons
+// Get all the dropdown buttons
+// Get all the dropdown buttons
+// Add this JavaScript code to your existing JS file or in a <script> tag
 
+// document.addEventListener('DOMContentLoaded', function() {
+// 	const accordionButtons = document.querySelectorAll('.card-header button');
+// 	const accordionCollapses = document.querySelectorAll('.collapse');
+  
+// 	// Remove the 'show' class from all collapsed elements on page load
+// 	accordionCollapses.forEach(collapse => {
+// 	  collapse.classList.remove('show');
+// 	});
+  
+// 	accordionButtons.forEach(button => {
+// 	  button.addEventListener('mouseenter', function() {
+// 		const targetCollapse = document.getElementById(this.getAttribute('aria-controls'));
+// 		accordionCollapses.forEach(collapse => {
+// 		  if (collapse !== targetCollapse) {
+// 			collapse.classList.remove('show');
+// 		  }
+// 		});
+// 		this.parentElement.classList.add('show');
+// 		targetCollapse.classList.add('show');
+// 	  });
+  
+// 	  button.addEventListener('mouseleave', function() {
+// 		const targetCollapse = document.getElementById(this.getAttribute('aria-controls'));
+// 		this.parentElement.classList.remove('show');
+// 		targetCollapse.classList.remove('show');
+// 	  });
+// 	});
+//   });
+// Get the carousel element
+// Get all the dropdown buttons
+const dropdownButtons = document.querySelectorAll('.btn-link');
+
+dropdownButtons.forEach((button) => {
+  button.addEventListener('click', (event) => {
+    event.preventDefault();
+
+    const targetCollapse = document.querySelector(event.currentTarget.getAttribute('data-target'));
+    targetCollapse.classList.toggle('show');
+
+    const otherCollapses = document.querySelectorAll('.collapse.show:not(#' + targetCollapse.id + ')');
+    otherCollapses.forEach((collapse) => {
+      collapse.classList.remove('show');
+    });
+
+    event.currentTarget.classList.toggle('collapsed');
+
+    const chevronIcon = event.currentTarget.querySelector('.fa');
+    chevronIcon.classList.toggle('fa-chevron-down');
+    chevronIcon.classList.toggle('fa-chevron-up');
+  });
+});
 
 	var fullHeight = function() {
 
