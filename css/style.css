@@ -114,7 +114,9 @@ blockquote {
 
 b,
 strong {
-  font-weight: bolder; }
+  font-weight: bolder; 
+  color: #D3D3D3;
+}
 
 small {
   font-size: 80%; }
@@ -485,6 +487,7 @@ pre {
   .no-gutters > .col,
   .no-gutters > [class*="col-"] {
     padding-right: 0;
+    top: 25px;
     padding-left: 0; }
 
 .col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12, .col,
@@ -7202,7 +7205,7 @@ button.bg-dark:focus {
     padding: 3rem !important; }
   .pt-md-5,
   .py-md-5 {
-    padding-top: 3rem !important; }
+    padding-top: 0rem !important; }
   .pr-md-5,
   .px-md-5 {
     padding-right: 3rem !important; }
@@ -7466,8 +7469,27 @@ button.bg-dark:focus {
   .pl-lg-5,
   .px-lg-5 {
     padding-left: 3rem !important;
-    height: 530px;
+    height: 600px;
   }
+
+
+.clicked {
+    animation: example 0.5s;
+}
+
+@keyframes example {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+
   .m-lg-n1 {
     margin: -0.25rem !important; }
   .mt-lg-n1,
@@ -8504,18 +8526,19 @@ h1, h2, h3, h4, h5,
           border-color: #fff; }
   .owl-carousel.home-slider {
     position: relative;
-    height: 700px;
+    height: 475px;
     z-index: 0; }
     .owl-carousel.home-slider .slider-item {
       background-size: cover;
       background-repeat: no-repeat;
       background-position: center center;
-      height: 700px;
+      height: 500px;
       position: relative;
       z-index: 0;
       overflow: hidden; }
       .owl-carousel.home-slider .slider-item .overlay {
         position: absolute;
+        height: 500px;
         top: 0;
         bottom: 0;
         right: 0;
@@ -8528,7 +8551,7 @@ h1, h2, h3, h4, h5,
         .owl-carousel.home-slider .slider-item {
           background-position: center center !important; } }
       .owl-carousel.home-slider .slider-item .slider-text {
-        height: 700px;
+        height: 415px;
         position: relative; }
         .owl-carousel.home-slider .slider-item .slider-text .text {
           z-index: 0;
@@ -8600,7 +8623,7 @@ h1, h2, h3, h4, h5,
       position: absolute;
       left: 0;
       right: 0;
-      bottom: 40px;
+      bottom: -20px;
       width: 100%;
       text-align: center; }
       @media (max-width: 767.98px) {
@@ -8942,7 +8965,7 @@ textarea.form-control {
   background: #3c312e; }
 
 .ftco-no-pt {
-  padding-top: 0 !important; 
+  top: 0px;
   
   
 }
@@ -9344,9 +9367,18 @@ textarea.form-control {
   background: transparent; }
   .ftco-faqs .myaccordion .card-header p {
     position: relative;
+    width: 900px;
     font-weight: 500;
-    font-size: 18px;
-    text-align: left; }
+    font-size: 20px;
+    text-align: left; 
+    background: #a30f16;
+    padding: 5px;
+    border-radius: 8px;
+    color: whitesmoke;
+  }
+    .btn:hover {
+      color: var(--red); /* Change text color to red on hover */
+  }
 
 .ftco-faqs .myaccordion .fa {
   font-size: 16px;
