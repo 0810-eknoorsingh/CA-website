@@ -114,8 +114,9 @@ blockquote {
 
 b,
 strong {
-  font-weight: bolder; 
-  color: #D3D3D3;
+  font-weight: bolder;
+  font-family: "Montserrat", Arial, sans-serif; 
+  /* color: #D3D3D3; */
 }
 
 small {
@@ -8235,8 +8236,8 @@ font-size: large;
   
   .accordion__wrapper {
       background-color: var(--color-white);
-      box-shadow: var(--shadow);
-      border-radius: 2.5rem;
+      /* box-shadow: var(--shadow);
+      border-radius: 2.5rem; */
       width: 100%;
       max-width: 60rem;
       padding: 5rem;
@@ -8280,7 +8281,7 @@ font-size: large;
   .accordion__question{
       font-size: var(--fs-md);
       font-weight: var(--fw-medium);
-      color: var(--color-title);
+      color: black;
   }
   
   .accordion__answer{
