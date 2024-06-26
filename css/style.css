@@ -4,7 +4,7 @@
  * Copyright 2011-2018 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
-:root {
+ :root {
   --blue: #007bff;
   --indigo: #6610f2;
   --purple: #6f42c1;
@@ -3674,6 +3674,7 @@ input[type="button"].btn-block {
       display: -webkit-box !important;
       display: -ms-flexbox !important;
       display: flex !important;
+      margin-left: -160px;
       -ms-flex-preferred-size: auto;
       flex-basis: auto; }
     .navbar-expand-lg .navbar-toggler {
@@ -8086,16 +8087,96 @@ body {
   margin-top: 50px;
 
 }
-.h3s {
-  font-size: 32px;
+section {
+  /* height: 100vh; */
+  width: 100%;
+  display: grid;
+  place-items: center;
+}
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+.column {
+  width: 100%;
+  padding: 0 1em 1em 1em;
+  text-align: center;
+}
+.card {
+  width: 100%;
+  height: 100%;
+  padding: 2em 1.5em;
+  background: linear-gradient(#ffffff 50%, #d94e5b 50%);
+ 
+  background-size: 100% 200%;
+  background-position: 0 2.5%;
+  border-radius: 5px;
+  box-shadow: 0 0 35px rgba(0, 0, 0, 0.12);
+  cursor: pointer;
+  transition: 0.5s;
+}
+h3 {
+  font-size: 20px;
+  font-weight: 600;
+  color: #1f194c;
+  margin: 1em 0;
 }
 p {
-  margin: 0 0 10px;
+  color: #575a7b;
+  font-size: 15px;
+  line-height: 1.6;
+  letter-spacing: 0.03em;
 }
-.intro-section {
-  padding-top: 50px;
-  padding-bottom: 80px;
-  border-radius: 50px;
+.icon-wrapper {
+  background-color: #d94e5b;
+  position: relative;
+  margin: auto;
+  font-size: 30px;
+  height: 2.5em;
+  width: 2.5em;
+  color: #ffffff;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  transition: 0.5s;
+}
+.card:hover {
+  background-position: 0 100%;
+}
+.card:hover .icon-wrapper {
+  background-color: #ffffff;
+  color: #d94e5b;
+}
+.card:hover h3 {
+  color: #ffffff;
+}
+.card:hover p {
+  color: #f0f0f0;
+}
+@media screen and (min-width: 576px) {
+
+  .column {
+    flex: 0 50%;
+    max-width: 50%;
+  }
+}
+@media screen and (min-width: 768px) {
+  section {
+    padding: 0 2em;
+  }
+  .column {
+    flex: 0 0 33.33%;
+    max-width: 33.33%;
+  }
+}
+@media screen and (min-width: 992px) {
+  section {
+    padding: 1em 3em;
+  }
+  .column {
+    flex: 0 0 25%;
+    max-width: 25%;
+  }
 }
 
 #accordion-help .panel-title,
@@ -8204,6 +8285,7 @@ p {
   .fins{
     /* text-align:start; */
     /* position: fixed; */
+    text-align: center;
     color: navy;
     font-size: large;
     text-decoration: underline;
@@ -8217,13 +8299,12 @@ font-size: large;
   }
 
   .fins1{
-    /* text-align:start; */
-    /* position: fixed; */
-    max-width: 500px;
-    /* text-decoration: underline; */
+    max-width: 1000px;
+    font-size: 1.5vw; /* Use viewport width for responsive font size */
     font-family: "Montserrat", Arial, sans-serif;
-    margin-left: 160px;
-    margin-bottom: 30px;
+    margin: 0 auto 30px auto; /* Center the div horizontally and add bottom margin */
+    text-align: center; /* Center the text inside the div */
+    padding: 0 20px; /* Add padding for better readability on smaller screens */
   }
   .containerx{ 
       width: 100%;
@@ -8297,7 +8378,7 @@ font-size: large;
   @media screen and (min-width: 580px) {
       .accordion__wrapper {
           padding: 5rem 8rem;
-          margin-top: 50px;
+          margin-top: 350px;
     
 
       }
